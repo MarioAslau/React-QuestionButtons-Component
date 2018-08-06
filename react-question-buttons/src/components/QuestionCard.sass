@@ -1,0 +1,43 @@
+$green-gradient-color: #47e4c1, #07cddd
+$red-gradient-color: rgba(250, 145, 97, 0.7), rgba(247, 59, 28, 0.69)
+$yellow-gradient-color: #fdc830, #ef8048
+$text: #FFFFFF
+
+.question-card
+    width: 80%
+    max-width: 710px
+    height: 365px
+    border-radius: 8px
+    background-image: linear-gradient(to bottom, $red-gradient-color)
+    box-shadow: 0 2px 12px 6px rgba(167, 196, 220, 0.5)
+    padding: 30px 40px
+
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+
+    &-correct
+        background-image: linear-gradient(to bottom, $green-gradient-color)
+    
+    &-incorrect
+        background-image: linear-gradient(to bottom, $red-gradient-color)
+
+    &-null
+        background: linear-gradient(to bottom, $yellow-gradient-color)
+
+    .question-header
+        font-size: 18px
+        font-weight: bold
+        font-style: normal
+        font-stretch: normal
+        line-height: normal
+        letter-spacing: 0.4px
+        text-align: center
+        color: $text
+    
+    .question-text
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        font-size: 14px;
+        color: $text

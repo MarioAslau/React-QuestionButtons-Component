@@ -1,0 +1,54 @@
+$question-toggle-red: #fbfbfb
+$background-color-light-grey: rgba(249, 249, 249, 0.5)
+$box-shadow-color: rgba(195, 51, 51, 0.5)
+
+.question-toggle-container
+    position: relative
+    width: 70%
+    height: 55px
+    border-radius: 100px
+    border: solid 1px $question-toggle-red
+    padding: 5px
+    margin: 5px
+
+    display: flex
+    justify-content: space-around
+    align-items: center
+    font-size: 14px
+    font-weight: bold
+    letter-spacing: 0.4px
+    color: #ffffff
+    transition: width 1s ease-in-out
+
+.question-slider
+    position: absolute
+    height: 100%
+    width: 55%
+    z-index: 999
+    border-radius: 100px
+    background-color: $background-color-light-grey
+    box-shadow: 0 0 6px 1px $box-shadow-color
+    transition: left 1s ease-in-out
+
+    &-left
+        left: 0
+
+    &-right
+        left: 45.2%
+
+    &-choice
+        cursor: pointer
+        text-align: center
+        width: 50%
+        padding: 15px 30px
+        font-size: 12px
+
+@media (max-width: 680px)
+    .question-toggle-container
+        width: 100%
+    .question-slider-choice
+        padding: 15px 25px
+
+@media (min-width: 680px) and (max-width: 980px)
+    .question-toggle-container
+        width: 80%
